@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<!-- ================= HEAD (NOT VISIBLE) ================= -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InvestTell</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- ================= HEAD (NOT VISIBLE) ================= -->
+
+
+
+
+
+<!-- ================= BODY (VISIBLE PAGE) ================= -->
+<body>
+
+
+<!-- ========== HEADER (LOGO + SIGNUP) ========== -->
+<header class="header">
+  <div class="left">
+    <img src="images/logo.png" alt="InvestTell logo" class="logo">
+  </div>
+
+ <div class="auth-buttons" id="auth-buttons-container">
+  <button onclick="goToLogin()" id="signin-btn">Sign In</button>
+  <button class="primary" onclick="goToSignup()" id="signup-btn">Sign Up</button>
+ </div>
+</header>
+
+<!-- Toast Notification -->
+<div id="auth-toast"></div>
+<!-- ========== HEADER (LOGO + SIGNUP) ========== -->
+
+
+
+
+
+<!-- ========== NAVIGATION MENU ========== -->
+<nav>
+  <a href="#" onclick="comingSoon(event)" data-i18n="home">Home</a>
+  <a href="#" onclick="comingSoon(event)" data-i18n="courses">Courses</a>
+  <a href="#" onclick="comingSoon(event)" data-i18n="trending">Trending</a>
+  <a href="#" onclick="comingSoon(event)" data-i18n="download">Download</a>
+  <a href="#" onclick="comingSoon(event)" data-i18n="premium">Premium</a>
+</nav>
+<!-- ========== NAVIGATION MENU ========== -->
+
+
+
+
+
+<!-- ===============  TICKER BAR  =============== -->
+<div class="ticker-wrapper">
+  <div class="ticker-bar">
+    <span>Gold: <b id="gold">--</b></span>
+    <span>Silver: <b id="silver">--</b></span>
+    <span>Oil: <b id="oil">--</b></span>
+    <span>USD: <b id="usd">--</b></span>
+  </div>
+</div>
+<!-- ===============  TICKER BAR  =============== -->
+
+
+
+
+
+<!-- ===============  SEARCH BAR =============== -->
+<div class="search-bar">
+  <input type="text" data-i18n-placeholder="searchPlaceholder" placeholder="Search courses...">
+  <button onclick="searchCards()" data-i18n="searchBtn">Search</button>
+</div>
+<!-- ===============  SEARCH BAR =============== -->
+
+
+
+
+
+<!-- ========== HERO / INTRO ========== -->
+<section class="hero">
+  <h2 data-i18n="heroTitle">Learn Economics & Finance the smart way</h2>
+  <p data-i18n="heroSub">Where Elite Code Meets Global Markets.</p>
+</section>
+<!-- ========== HERO / INTRO ========== -->
+
+
+
+
+
+<!--===============  CARDS SECTION  ===============-->
+<section class="cards">
+
+<!-- CARD 1 -->
+  <div class="card disabled" onclick="comingSoon()">
+      <div class="icon">
+       <img src="images/economics.png" alt="Economics">
+      </div>
+     <h3 data-i18n="economics">Economics</h3>
+  </div>
+<!-- CARD 1 -->
+
+<!-- CARD 2 -->
+ <div class="card disabled" onclick="comingSoon()">
+    <div class="icon">
+     <img src="images/finance.png" alt="Finance">
+    </div>
+   <h3 data-i18n="finance">Finance</h3>
+ </div>
+<!-- CARD 2 -->
+
+ <!-- CARD 3 -->
+  <div class="card disabled" onclick="comingSoon()">
+     <div class="icon">
+      <img src="images/projects.png" alt="Projects">
+     </div>
+    <h3 data-i18n="projects">Projects</h3>
+  </div>
+ <!-- CARD 3 -->
+
+ <!-- CARD 4 -->
+  <div class="card premium disabled" onclick="comingSoon()">
+     <div class="icon">
+      <img src="images/premium.png" alt="Premium">
+     </div>
+    <h3 data-i18n="premium">Premium</h3>
+  </div>
+</section>
+<!-- CARD 4 -->
+<!--===============  CARDS SECTION  ===============-->
+
+
+
+
+
+<!-- =============== FOOTER =============== -->
+<footer>
+  
+  <p data-i18n="footerText">© 2026 InvestTell. All rights reserved</p>
+
+<!-- LANGUAGE SELECTOR -->
+<div class="lang-icon">
+  <button id="lang-btn" onclick="toggleLangMenu()">🌐 EN</button>
+
+  <div id="lang-menu" class="lang-menu">
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('es')">Español</button>
+    <button onclick="changeLanguage('fr')">Français</button>
+    <button onclick="changeLanguage('de')">Deutsch</button>
+    <button onclick="changeLanguage('pt')">Português</button>
+  </div>
+ </div>
+
+<!-- FOOTER LINKS -->
+<div class="footer-links">
+  <a href="#" onclick="comingSoon(event)" data-i18n="home">Home</a>
+  <a href="#" onclick="comingSoon(event)" data-i18n="aboutUs">About Us</a>
+  <a href="#" onclick="comingSoon(event)" data-i18n="privacyPolicy">Privacy Policy</a>
+  <a href="#" onclick="comingSoon(event)" data-i18n="contactUs">Contact Us</a>
+</div>
+</footer>
+<!-- =============== FOOTER ================= -->
+
+
+
+
+
+<!-- Main JS (ONLY THIS ONE - NO FIREBASE) -->
+<script src="script.js"></script>
+<!-- Auth JS (HAS ALL FIREBASE) -->
+<script type="module" src="auth.js"></script>
+
+
+
+
+
+</body>
+</html>

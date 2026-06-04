@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Email - InvestTell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <div class="auth-page">
+    <h2>Verify Your Email</h2>
+    <p style="text-align: center; color: #64748b; margin-bottom: 20px; font-size: 14px;">
+      We sent a verification link to your email address. Please verify your account, then sign in.
+    </p>
+
+    <button type="button" onclick="window.location.href='login.html'">Go to Sign In</button>
+
+    <p style="text-align: center; margin-top: 20px; color: #0f172a;">
+      Didn't receive it? Check your spam folder and try again after a few minutes.
+    </p>
+
+    <div id="auth-toast"></div>
+  </div>
+
+  <footer>
+    <p data-i18n="footerText">© 2026 InvestTell. All rights reserved</p>
+
+    <div class="lang-icon">
+      <button id="lang-btn" onclick="toggleLangMenu()">🌐 EN</button>
+      <div id="lang-menu" class="lang-menu">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('es')">Español</button>
+        <button onclick="changeLanguage('fr')">Français</button>
+        <button onclick="changeLanguage('de')">Deutsch</button>
+        <button onclick="changeLanguage('pt')">Português</button>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html" data-i18n="home">Home</a>
+      <a href="#" onclick="comingSoon(event)" data-i18n="aboutUs">About Us</a>
+      <a href="#" onclick="comingSoon(event)" data-i18n="privacyPolicy">Privacy Policy</a>
+      <a href="#" onclick="comingSoon(event)" data-i18n="contactUs">Contact Us</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
