@@ -373,6 +373,15 @@ nav a:active {
   margin: 8px 0 0;
 }
 
+/* card body */
+.card p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 10px 0 0;
+  color: #444;
+  font-weight: 400;
+}
+
 /* premium card */
 .card.premium {
   border: 2px solid gold;
