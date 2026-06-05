@@ -12,7 +12,7 @@
 <body>
 
   <div class="auth-page">
-    <h2 data-i18n="signup">Create Account</h2>
+    <h2 data-i18n="signupTitle">Create Account</h2>
 
     <form onsubmit="event.preventDefault(); if (window.handleSignup) { window.handleSignup(event); } else { const t=document.getElementById('auth-toast'); if(t){ t.textContent='❌ Auth script did not load. Open this site via http (Live Server), not file://'; t.className='error'; t.style.display='block'; } else { alert('Auth script did not load. Open this site via http (Live Server), not file://'); } } return false;" id="signup-form">
       <input 
@@ -38,8 +38,8 @@
     </form>
 
     <p style="text-align: center; margin-top: 20px; color: #0f172a;">
-      Already have an account? 
-      <a href="login.html" style="color: #22c55e; font-weight: 600; text-decoration: none;">Sign In</a>
+      <span data-i18n="hasAccount">Already have an account?</span>
+      <a href="login.html" data-i18n="login" style="color: #22c55e; font-weight: 600; text-decoration: none;">Sign In</a>
     </p>
 
     <div id="auth-toast"></div>

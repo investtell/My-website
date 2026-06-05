@@ -21,8 +21,8 @@
   </div>
 
   <div class="auth-buttons" id="auth-buttons-container">
-    <button onclick="goToLogin()">Sign In</button>
-    <button class="primary" onclick="goToSignup()">Sign Up</button>
+    <button onclick="goToLogin()" data-i18n="login">Sign In</button>
+    <button class="primary" onclick="goToSignup()" data-i18n="signup">Sign Up</button>
   </div>
 </header>
 
@@ -44,7 +44,7 @@
       <div class="profile-avatar" aria-hidden="true"></div>
       <h2 id="profile-email">user@email.com</h2>
       <p id="profile-join-date">Member since 2026</p>
-      <button class="logout-btn" onclick="tryLogout()">Logout</button>
+      <button class="logout-btn" onclick="tryLogout()" data-i18n="logout">Logout</button>
     </div>
 
     <div class="menu">

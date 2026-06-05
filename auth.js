@@ -148,13 +148,17 @@ function updateAuthButtons(user) {
           <path d="M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
-      <button onclick="handleLogout()" class="primary" style="background: #ef4444; border: none;">Logout</button>
+      <button onclick="handleLogout()" class="primary" data-i18n="logout" style="background: #ef4444; border: none;">Logout</button>
     `;
   } else {
     container.innerHTML = `
-      <button onclick="goToLogin()">Sign In</button>
-      <button class="primary" onclick="goToSignup()">Sign Up</button>
+      <button onclick="goToLogin()" data-i18n="login">Sign In</button>
+      <button class="primary" onclick="goToSignup()" data-i18n="signup">Sign Up</button>
     `;
+  }
+
+  if (typeof window.refreshDynamicTranslations === "function") {
+    window.refreshDynamicTranslations();
   }
 }
 
